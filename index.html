@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Planner</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <main class="app">
+
+    <header class="header">
+      <div class="greeting">
+        <h1>Hey, <span class="user-name">User</span> 👋</h1>
+        <p>Small steps today. Big victories tomorrow.</p>
+      </div>
+
+      <div class="header-actions">
+        <button class="completedTask-btn">3 / 10 Completed</button>
+        <button class="add-btn">+ Add Task</button>
+      </div>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab active">All</button>
+      <button class="tab">Today</button>
+      <button class="tab">Completed</button>
+      <button class="tab">Pending</button>
+    </nav>
+
+    <div class="divider"></div>
+
+    <section class="task-grid">
+
+      <!-- <article id="73c10234-6077-4435-b45e-2bb99bfc6f4" class="task-card">
+        <div class="task-rail">
+          <input class="task-rail-checkbox" type="checkbox" />
+        </div>
+
+        <div class="task-paper">
+          <div class="card-actions"><span class="card-action card-edit-action">✏️</span><span class="card-action card-delete-action">❌</span></div>
+
+          <div>
+            <div class="task-title">Design landing page hero section</div>
+            <p class="task-desc">Create a calm, minimal hero section for the new product website.</p>
+          </div>
+
+          <div class="meta-row">
+            <div class="tags">
+              <span class="tag urgent">urgent</span>
+              <span class="tag important">important</span>
+              <span class="tag norush">no rush</span>
+            </div>
+            <span class="date">12 Apr 2026</span>
+          </div>
+        </div>
+      </article> -->
+
+    </section>
+
+
+
+    <!-- Add Task Modal -->
+    <div class="modal-overlay add-task-modal">
+      <div class="task-modal">
+        <h2 class="add-task-head"></h2>
+
+        <form class="task-form add-task-form">
+          <label>
+            <span>Title</span>
+            <input class="add-task-title" type="text" placeholder="Write task title..." required />
+            <small class="errorMsg writeTitle-errorMsg">* Please write a title</small>
+          </label>
+          
+          <label>
+            <span>Description</span>
+            <textarea class="add-task-description" rows="3" placeholder="Short calm description... (optional)"></textarea>
+            <small class="errorMsg writeDesc-errorMsg">* Please write a title</small>
+          </label>
+
+          <div class="form-row">
+            <fieldset class="tag-field">
+              <legend>Tags</legend>
+              <div class="tag-options">
+                <label class="tag-chip">
+                  <input class="task-tag" type="checkbox" value="urgent" />
+                  <span>urgent</span>
+                </label>
+                <label class="tag-chip">
+                  <input class="task-tag" type="checkbox" value="important" />
+                  <span>important</span>
+                </label>
+                <label class="tag-chip">
+                  <input class="task-tag" type="checkbox" value="norush" />
+                  <span>no rush</span>
+                </label>
+              </div>
+              <small class="errorMsg selectTag-errorMsg">* Please enter your name</small>
+            </fieldset>
+          </div>
+
+          <div class="modal-actions">
+            <button type="button" class="btn-ghost add-task-cancel-btn">Cancel</button>
+            <button type="submit" class="btn-primary form-submit-btn">Add Task</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- Edit Name Modal -->
+  <div class="modal-overlay name-modal">
+    <div class="task-modal">
+      <h2>Edit your name</h2>
+
+      <form class="task-form edit-username-form">
+        <label>
+          <span>Your name</span>
+          <input class="task-username" type="text" placeholder="Enter your name..." />
+          <small class="errorMsg editUsername-errorMsg">* Name is required</small>
+        </label>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-ghost edit-username-cancel-btn">Cancel</button>
+          <button type="submit" class="btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- Floating Add Task Button -->
+  <button class="fab">+ Add Task</button>
+
+
+  <!-- Minimal Lofi Footer -->
+  <footer class="footer">
+    <p>Made by <a href="https://linkedin.com/in/vijayvansh" target="_blank"
+        rel="noopener noreferrer">Vijay Vansh</a> • Made for you</p>
+  </footer>
+
+  <script src="script1.js"></script>
+</body>
+
+</html>
